@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.app">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".DataDisplaySettings"
+            android:label="Data Display Settings"
+            android:parentActivityName=".AdminAccess"></activity>
+        <activity
+            android:name=".AdminAccess"
+            android:label="Admin Access"
+            android:parentActivityName=".AdminLogin" />
+        <activity android:name=".AdminUsersDisplay"
+            android:label="Users Display"
+            android:parentActivityName=".AdminDataDisplay"/>
+        <activity
+            android:name=".AdminDataDisplay"
+            android:label="New Session"
+            android:parentActivityName=".AdminAccess" />
+        <activity
+            android:name=".UserDataDisplay"
+            android:label="Session"
+            android:parentActivityName=".UserLogin" />
+        <activity
+            android:name=".UserLogin"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AdminLogin"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
