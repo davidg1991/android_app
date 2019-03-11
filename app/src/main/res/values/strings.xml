@@ -17,6 +17,9 @@
     <string name="user_name">USER NAME</string>
     <string name="password_display">Password:</string>
     <string name="admin_login_name">Username:</string>
+    <string name="add_data">Add data</string>
+    <string name="contact_driver">Contact Driver</string>
+    <string name="manage_users">Manage Users</string>
 
 
 </resources>
