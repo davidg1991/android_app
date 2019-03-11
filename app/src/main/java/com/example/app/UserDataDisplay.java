@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDataDisplay extends AppCompatActivity {
-   public Button user_logout_button;
+
    protected ListView user_data_display;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class UserDataDisplay extends AppCompatActivity {
     }
     public void goUserStart(View view)
     {
-        user_logout_button=findViewById(R.id.user_logout_button);
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
     }

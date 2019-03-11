@@ -8,8 +8,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button button_admin;
-    public Button button_user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,13 +15,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goAdminLogin(View view)
     {
-        button_admin=findViewById(R.id.button_admin);
         Intent intent=new Intent(this,AdminLogin.class);
         startActivity(intent);
     }
     public void goUserLogin(View view)
     {
-        button_user=findViewById(R.id.button_user);
         Intent intent=new Intent(this,UserLogin.class);
         startActivity(intent);
     }

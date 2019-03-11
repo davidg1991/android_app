@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDataDisplay extends AppCompatActivity {
-    public Button manage_users_button;
+
     protected ListView admin_data_display;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class AdminDataDisplay extends AppCompatActivity {
     }
     public void goAdminUsersDisplay(View view)
     {
-        manage_users_button=findViewById(R.id.manage_users_button);
         Intent intent=new Intent(this,AdminUsersDisplay.class);
         startActivity(intent);
     }
