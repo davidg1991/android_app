@@ -259,6 +259,78 @@ public class AdminDataDisplay extends AppCompatActivity implements NavigationVie
 
 
     }
+    
+    public void addData()
+    {
+
+        loadListView();
+
+        if (!inputs.rangeOilTemperature() ||
+                !inputs.rangeOilPressure() ||
+                !inputs.rangeFuelPressure() ||
+                !inputs.rangeFuelTemperature() ||
+                !inputs.rangeCoolantTemperature() ||
+                !inputs.rangeEngineRPM())
+        {
+            sendNotification();
+        }
+    }
+
+
+    public void sendNotification()
+    {
+
+        String contentText = "The following issues of the sensor require attention: ";
+        List<String> issues = new ArrayList<>();
+        if (!inputs.rangeOilTemperature())
+        {
+            issues.add("oil temperature");
+        }
+
+        if (!inputs.rangeOilPressure())
+        {
+            issues.add("oil pressure");
+        }
+
+        if   (!inputs.rangeFuelPressure())
+        {
+            issues.add("fuel pressure");
+        }
+
+        if (!inputs.rangeFuelTemperature())
+        {
+            issues.add("Fuel temperature");
+        }
+
+        if (!inputs.rangeCoolantTemperature())
+        {
+            issues.add("Coolant temperature");
+        }
+
+        if (!inputs.rangeEngineRPM())
+        {
+            issues.add("Engine RPM");
+        }
+
+        contentText += TextUtils.join(", ", issues);
+
+        //Builds the notification
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setContentTitle("Warning!")
+                .setContentText(contentText);
+
+        //Creates and display the notification related to oil temperature
+        Intent notificationIntent=new Intent(this,AdministratorDataDisplayActivity.class);
+        PendingIntent contentIntent=PendingIntent.getActivity(this,0,notificationIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+        notificationBuilder.setContentIntent(contentIntent);
+
+
+        //Add as notification
+        NotificationManager notificationManager= (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(0,notificationBuilder.build());
+
+    }//end of function
 
 
 
