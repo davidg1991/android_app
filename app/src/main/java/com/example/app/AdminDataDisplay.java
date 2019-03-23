@@ -235,11 +235,10 @@ public class AdminDataDisplay extends AppCompatActivity implements NavigationVie
     
      public void m_publish()
     {
-        String topic="Data display";
+        String topic=topicStr;
         int qos=2;
         String content="Message from the input file!";
         String clientId= MqttClient.generateClientId();
-        String MQTTHOST="tcp://broker.hivemq.com:1883";
         MemoryPersistence persistence=new MemoryPersistence();
 
         try
