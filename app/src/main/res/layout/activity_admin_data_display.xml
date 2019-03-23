@@ -7,14 +7,12 @@
     tools:context=".AdminDataDisplay">
 
     <android.support.design.widget.NavigationView
+
         android:id="@+id/navigation_view"
+        app:headerLayout="@layout/menu_header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/drawermenu">
 
     </android.support.design.widget.NavigationView>
