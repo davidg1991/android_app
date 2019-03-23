@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/db"
+        android:title="@string/db"
+        android:icon="@drawable/ic_dashboard_black_24dp"/>
+    <item
+        android:id="@+id/Data"
+        android:title="@string/data"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+    <item
+        android:id="@+id/Contact_Driver"
+        android:title="@string/contact_driver"
+        android:icon="@drawable/ic_drive_eta_black_24dp"/>
+    <item
+        android:id="@+id/Manage_Users"
+        android:title="@string/manage_users"
+        android:icon="@drawable/ic_contacts_black_24dp"/>
+    <item
+        android:id="@+id/Logout"
+        android:title="@string/Logout"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+</menu>

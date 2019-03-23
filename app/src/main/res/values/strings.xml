@@ -20,6 +20,17 @@
     <string name="add_data">Add data</string>
     <string name="contact_driver">Contact Driver</string>
     <string name="manage_users">Manage Users</string>
+    <string name="conStatusImage">Connection Status</string>
+    <string name="db">Dashboard</string>
+    <string name="data">Data Settings</string>
+    <string name="Logout">Logout</string>
+    <string name="close">close</string>
+    <string name="no_connection">Failed to connect to the server!!</string>
+    <string name="warning">warning</string>
+    <string name="re_connect">Try Again</string>
+    <string name="Manage_users">Manage Users</string>
+
+
 
 
 </resources>
