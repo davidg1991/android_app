@@ -232,6 +232,45 @@ public class AdminDataDisplay extends AppCompatActivity implements NavigationVie
             }
         });
     }
+    
+     public void m_publish()
+    {
+        String topic="Data display";
+        int qos=2;
+        String content="Message from the input file!";
+        String clientId= MqttClient.generateClientId();
+        String MQTTHOST="tcp://broker.hivemq.com:1883";
+        MemoryPersistence persistence=new MemoryPersistence();
+
+        try
+        {
+            MqttClient client=new MqttClient(MQTTHOST,clientId,persistence);
+            MqttConnectOptions connectOptions=new MqttConnectOptions();
+            connectOptions.setCleanSession(true);
+            System.out.println("Connecting to broker: "+MQTTHOST);
+            client.connect(connectOptions);
+            System.out.println("Connected");
+            System.out.println("Publishing message: "+content);
+            MqttMessage message = new MqttMessage(content.getBytes());
+            message.setQos(qos);
+            client.publish(topic, message);
+            System.out.println("Message published");
+            client.disconnect();
+            System.out.println("Disconnected");
+            System.exit(0);
+        }
+
+        catch (MqttException e)
+        {
+            System.out.println("reason "+e.getReasonCode());
+            System.out.println("msg "+e.getMessage());
+            System.out.println("loc "+e.getLocalizedMessage());
+            System.out.println("cause "+e.getCause());
+            System.out.println("excep "+e);
+            e.printStackTrace();
+
+        }
+    }
 
     public void loadListView()
     {
