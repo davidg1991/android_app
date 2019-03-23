@@ -29,8 +29,8 @@
     <string name="warning">warning</string>
     <string name="re_connect">Try Again</string>
     <string name="Manage_users">Manage Users</string>
-
-
+    <string name="open">Open</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

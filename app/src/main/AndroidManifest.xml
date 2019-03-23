@@ -2,25 +2,34 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.app">
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:allowBackup="true">
-        <activity android:name=".DataDisplaySettings"
-            android:label="Data Display Settings"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".SavedSession"
+            android:label="Saved Session"
             >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.app.AdminAccess" />
+                android:value="com.example.app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DataDisplaySettings"
+            android:label="Data Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.app.AdminDataDisplay" />
         </activity>
         <activity
             android:name=".AdminAccess"
@@ -29,8 +38,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.app.AdminLogin" />
         </activity>
-        <activity android:name=".AdminUsersDisplay"
-            android:label="Users Display">
+        <activity
+            android:name=".AdminUsersDisplay"
+            android:label="Manage Users">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.app.AdminDataDisplay" />
@@ -44,19 +54,17 @@
         </activity>
         <activity
             android:name=".UserDataDisplay"
-            android:label="Session" >
+            android:label="Session">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.app.UserLogin" />
         </activity>
-        <activity
-            android:name=".UserLogin">
+        <activity android:name=".UserLogin">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.app.MainActivity" />
         </activity>
-        <activity
-            android:name=".AdminLogin" >
+        <activity android:name=".AdminLogin">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.app.MainActivity" />
@@ -68,8 +76,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="org.eclipse.paho.android.service.MqttService" >
-        </service>
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
     </application>
 
 </manifest>

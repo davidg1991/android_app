@@ -21,12 +21,7 @@ public class AdminAccess extends AppCompatActivity {
     }
     public void goSavedSession(View view)
     {
-        Intent intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-    public void goDisplaySettings(View view)
-    {
-        Intent intent=new Intent(this,DataDisplaySettings.class);
+        Intent intent=new Intent(this,SavedSession.class);
         startActivity(intent);
     }
     public void goNewSession(View view)

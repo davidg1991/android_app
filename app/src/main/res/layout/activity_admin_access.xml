@@ -45,21 +45,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/admin_data_display_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:onClick="goDisplaySettings"
-        android:text="@string/data_settings_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_session_button" />
-
-    <Button
         android:id="@+id/session_history_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,6 +58,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin_data_display_button" />
+        app:layout_constraintTop_toBottomOf="@+id/new_session_button" />
 
 </android.support.constraint.ConstraintLayout>
