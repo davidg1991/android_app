@@ -79,6 +79,107 @@ public class DataInputs
     {
         this.gear = gear;
     }
+    
+     public boolean rangeOilTemperature()
+    {
+        if (oilTemperature>=75.0f & oilTemperature<=120.0f)
+        {
+            System.out.println("The value is within the range!");
+            return true;
+        }
+
+
+        else
+        {
+            System.out.println("The value is outside the range!");
+            return false;
+        }
+    }
+
+    public boolean rangeOilPressure()
+    {
+        if (oilPressure>=400.0f & oilPressure<=500.0f)
+        {
+            System.out.println("The value is within the range!");
+            return true;
+        }
+
+
+        else
+        {
+            System.out.println("The value is outside the range!");
+            return false;
+        }
+
+    }
+
+    public boolean rangeFuelTemperature()
+    {
+        if (fuelTemperature>roomTemperature)
+        {
+            System.out.println("The value is within the range!");
+            return true;
+        }
+
+        else
+        {
+            System.out.println("The value is outside the range!");
+            return false;
+        }
+
+    }
+
+    public boolean rangeFuelPressure()
+    {
+        if (fuelPressure>=380.0f & fuelPressure<=420.0f)
+        {
+            System.out.println("The value is within the range!");
+            return true;
+        }
+
+
+        else
+        {
+            System.out.println("The value is outside the range!");
+            return false;
+        }
+
+    }
+
+    public boolean rangeCoolantTemperature()
+    {
+        if (coolantTemperature>=80.0f & coolantTemperature<=100.0f)
+        {
+            System.out.println("The value is within the range!");
+            return true;
+        }
+
+
+        else
+        {
+            System.out.println("The value is outside the range!");
+            return false;
+        }
+
+
+    }
+
+    public boolean rangeEngineRPM()
+    {
+        if (engineRPM>=12500.0f)
+        {
+            System.out.println("The value is within the range!");
+            return true;
+        }
+
+
+        else
+        {
+            System.out.println("The value is outside the range!");
+            return false;
+        }
+
+    }
 
 
 }
